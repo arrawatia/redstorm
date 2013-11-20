@@ -11,5 +11,7 @@
       <artifact name="jffi" type="jar" m:classifier="native"/>
     </dependency>
 
+    <dependency org="com.infochimps" name="storm-util" rev="1.7.0-SNAPSHOT" conf="default" transitive="true"/>
+
   </dependencies>
 </ivy-module>

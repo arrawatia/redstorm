@@ -7,6 +7,8 @@
       <ibiblio name="sonatype" root="http://repo.maven.apache.org/maven2/" m2compatible="true"/>
       <ibiblio name="clojars" root="http://clojars.org/repo/" m2compatible="true"/>
       <ibiblio name="conjars" root="http://conjars.org/repo/" m2compatible="true"/>
+      <ibiblio name="infochimps-releases" root="https://s3.amazonaws.com/artifacts.chimpy.us/maven-s3p/releases" m2compatible="true"/>
+      <ibiblio name="infochimps-snapshots" root="https://s3.amazonaws.com/artifacts.chimpy.us/maven-s3p/snapshots" m2compatible="true"/>
     </chain>
   </resolvers>
 </ivysettings>
