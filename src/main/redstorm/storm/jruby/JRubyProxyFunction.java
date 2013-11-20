@@ -18,7 +18,7 @@ public class JRubyProxyFunction implements Function {
 
 
   @Override
-  public void execute(final TridentTuple _tridentTuple, final TridentCollector _tridentCollector) {
+  public void execute( TridentTuple _tridentTuple,  TridentCollector _tridentCollector) {
     if(_proxy == null) {
       _proxy = newProxy(_baseClassPath, _realClassName);
     }
