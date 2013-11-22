@@ -10,10 +10,7 @@ Dir["../tv-decisionengine/target/dependency/storm/default/*"].each{|f| $CLASSPAT
 PROXY_JRUBY_TEMPLATE = File.read("./ruby_proxy.erb")
 PROXY_JAVA_TEMPLATE = File.read("./java_proxy.erb")
 
-to_generate = ['storm.trident.state.map.IBackingMap',
-                'storm.trident.state.map.MapState',
-                "storm.trident.operation.CombinerAggregator"]
-
+to_generate = ['storm.trident.state.StateFactory']
 
 # Return all java functions of a java class
 def get_functions(jlass)

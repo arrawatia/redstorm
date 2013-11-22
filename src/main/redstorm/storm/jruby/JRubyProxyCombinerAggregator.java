@@ -8,33 +8,37 @@ public class JRubyProxyCombinerAggregator implements CombinerAggregator {
   CombinerAggregator _proxy;
   String _realClassName;
   String _baseClassPath;
-  String[] _fields;
 
-  public JRubyProxyCombinerAggregator(final String baseClassPath, final String realClassName, final String[] fields) {
+  public JRubyProxyCombinerAggregator(final String baseClassPath, final String realClassName) {
     _baseClassPath = baseClassPath;
     _realClassName = realClassName;
-    _fields = fields;
   }
 
 
   @Override
   public Object init(final TridentTuple _tridentTuple) {
-    
-    _proxy.init(_tridentTuple);
+      if(_proxy == null) {
+            _proxy = newProxy(_baseClassPath, _realClassName);
+          }
+    return _proxy.init(_tridentTuple);
     
   }
 
   @Override
   public Object combine(Object _object1, Object _object2) {
-    
-    _proxy.combine(_object1, _object2);
+     if(_proxy == null) {
+           _proxy = newProxy(_baseClassPath, _realClassName);
+         }
+    return _proxy.combine(_object1, _object2);
     
   }
 
   @Override
   public Object zero() {
-    
-    _proxy.zero();
+     if(_proxy == null) {
+           _proxy = newProxy(_baseClassPath, _realClassName);
+         }
+    return _proxy.zero();
     
   }
 

@@ -32,7 +32,7 @@ class ProxyCombinerAggregator
 
   java_signature 'Object combine(Object v1, Object v2)'
   def combine(_object1, _object2)
-    @real.combine(_object, _object2)
+    @real.combine(_object1, _object2)
   end
 
   java_signature 'Object zero()'

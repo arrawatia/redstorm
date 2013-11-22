@@ -28,6 +28,10 @@ java_import 'redstorm.storm.jruby.JRubyBatchSpout'
 java_import 'redstorm.storm.jruby.JRubyTransactionalSpout'
 java_import 'redstorm.storm.jruby.JRubyTransactionalBolt'
 java_import 'redstorm.storm.jruby.JRubyTransactionalCommitterBolt'
+java_import 'redstorm.storm.jruby.JRubyProxyCombinerAggregator'
+java_import 'redstorm.storm.jruby.JRubyProxyBackingMap'
+java_import 'redstorm.storm.jruby.JRubyProxyStateFactory'
+
 
 java_package 'redstorm'
 

@@ -1,3 +1,6 @@
+.idea/*
+bundle/*
+Gemfile.lock
 /tmp/
 /target/
 /.bundle
